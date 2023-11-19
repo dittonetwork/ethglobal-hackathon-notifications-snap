@@ -8,14 +8,6 @@ import getNotificationsState from "./methods/get-notifications-state"
 export const onRpcRequest: OnRpcRequestHandler = async ({ origin, request }) => {
   const params = request.params as any
 
-  const allowedOrigins: string[] = [
-    "https://hackathon-frontend-dev.dittonetwork.io/",
-    "https://app.dittonetwork.io"
-  ]
-
-  if (!allowedOrigins.some(orig => orig.toLowerCase() === origin.toLowerCase()) && origin.slice(0, 17) !== "http://localhost:")
-    throw new Error("Unsupported origin")
-
   switch (request.method) {
     case "ditto_connectNotifications":
       return await connectNotifications(params.address)

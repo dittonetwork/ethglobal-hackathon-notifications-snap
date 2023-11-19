@@ -1,9 +1,9 @@
 {
-  "version": "0.1.8",
+  "version": "0.1.10",
   "description": "Ditto Network notifications snap that will allow you to receive notifications right into your wallet",
   "proposedName": "Ditto Notifications",
   "source": {
-    "shasum": "jCQNrD7McVIA3Dh1/Zr6bSeumoTYeL2MFXJCo1LGfDE=",
+    "shasum": "0s5wOSYfqEGXuAPA5d0AAnGIbqWkgrXC0yYJD770AxA=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
