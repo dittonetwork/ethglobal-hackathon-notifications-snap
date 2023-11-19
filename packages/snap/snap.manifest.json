@@ -1,0 +1,37 @@
+{
+  "version": "0.1.8",
+  "description": "Ditto Network notifications snap that will allow you to receive notifications right into your wallet",
+  "proposedName": "Ditto Notifications",
+  "source": {
+    "shasum": "jCQNrD7McVIA3Dh1/Zr6bSeumoTYeL2MFXJCo1LGfDE=",
+    "location": {
+      "npm": {
+        "filePath": "dist/bundle.js",
+        "iconPath": "images/icon.svg",
+        "packageName": "ditto-notifications-snap",
+        "registry": "https://registry.npmjs.org/"
+      }
+    }
+  },
+  "initialPermissions": {
+    "snap_dialog": {},
+    "endowment:rpc": {
+      "dapps": true,
+      "snaps": false
+    },
+    "snap_manageState": {},
+    "snap_notify": {},
+    "endowment:cronjob": {
+      "jobs": [
+        {
+          "expression": "* * * * *",
+          "request": {
+            "method": "fireCronjob"
+          }
+        }
+      ]
+    },
+    "endowment:network-access": {}
+  },
+  "manifestVersion": "0.1"
+}
